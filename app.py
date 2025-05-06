@@ -53,6 +53,9 @@ def upload_file():
 
             # Determinăm status
             if days_diff < 0:
+                if days_diff == -1:
+                    status = "Expirat de ieri"
+            else:
                 status = f"Expirat de {abs(days_diff)} zile"
             elif days_diff == 0:
                 status = "Expiră astazi"
